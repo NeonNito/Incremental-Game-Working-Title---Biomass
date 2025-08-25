@@ -1,0 +1,250 @@
+[gd_scene load_steps=11 format=3 uid="uid://2mqfabn64ya2"]
+
+[ext_resource type="StyleBox" uid="uid://5vr61ivpd8y5" path="res://Scenes/UI/1.tres" id="1_7en7n"]
+[ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
+[ext_resource type="Script" uid="uid://c462k10v3qc3g" path="res://Scenes/UI/drn_btn.gd" id="3_s1n6v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1n6v"]
+bg_color = Color(0.690111, 0.566099, 0.656681, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsnfn"]
+bg_color = Color(0.780073, 0.677046, 0.751473, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uchyk"]
+bg_color = Color(0.339482, 0.674952, 0.561663, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
+bg_color = Color(0.426963, 0.78595, 0.662102, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7en7n"]
+bg_color = Color(0.758066, 0.489113, 0.754969, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.610692, 0.341632, 0.612991, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4rh7"]
+bg_color = Color(0.611765, 0.341176, 0.611765, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.756863, 0.490196, 0.756863, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fbet"]
+bg_color = Color(0.875701, 0.453765, 0.485795, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p4rh7")
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 886.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s1n6v")
+
+[node name="Panel2" type="Panel" parent="PanelContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(133, 324)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qsnfn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer2/Panel/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 7
+
+[node name="Buildings_List" type="RichTextLabel" parent="PanelContainer2/Panel/Panel2/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "Total Extractors: 0"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer2/Panel/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 7
+
+[node name="PROD_TOTAL" type="RichTextLabel" parent="PanelContainer2/Panel/Panel2/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "Biomass Production: 0 Per Second"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 300.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_uchyk")
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(250, 161)
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_62e2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DRN_BTN" type="Button" parent="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_7en7n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p4rh7")
+theme_override_styles/normal = ExtResource("1_7en7n")
+text = "Morph Drone"
+script = ExtResource("3_s1n6v")
+
+[node name="PROD_TIMER" type="Timer" parent="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN"]
+
+[node name="EXT_BTN" type="Button" parent="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_7en7n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p4rh7")
+theme_override_styles/normal = ExtResource("1_7en7n")
+text = "Morph Extractor"
+
+[node name="TOTAL_BTN" type="Button" parent="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_7en7n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p4rh7")
+theme_override_styles/normal = ExtResource("1_7en7n")
+text = "Morph Storage Sacks"
+
+[node name="Panel2" type="Panel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0fbet")
+
+[node name="CAPACITY_BAR" type="ProgressBar" parent="PanelContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BioMassTotal" type="RichTextLabel" parent="PanelContainer/VBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Biomass: 100"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BMS_BTN" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -148.0
+offset_right = 135.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_7en7n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p4rh7")
+theme_override_styles/normal = ExtResource("1_7en7n")
+text = "Create Biomass"
+
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN" to="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN" to="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN" method="_on_mouse_exited"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN" to="." method="_on_drn_btn_pressed_1st"]
+[connection signal="timeout" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/DRN_BTN/PROD_TIMER" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/EXT_BTN" to="." method="_on_ext_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Panel/Panel/VBoxContainer/TOTAL_BTN" to="." method="_on_total_btn_pressed"]
+[connection signal="pressed" from="BMS_BTN" to="." method="_on_bms_btn_pressed"]
