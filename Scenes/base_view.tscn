@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://lhupn7u2vgyr"]
+[gd_scene load_steps=11 format=3 uid="uid://lhupn7u2vgyr"]
 
 [ext_resource type="PackedScene" uid="uid://2mqfabn64ya2" path="res://Scenes/UI/control.tscn" id="1_tjy36"]
+[ext_resource type="Texture2D" uid="uid://cqi3g0e0b78cy" path="res://Resources/Models/Buildings/test.png" id="2_hpb7a"]
+[ext_resource type="ArrayMesh" uid="uid://d0fbshcniitnw" path="res://Resources/Models/Buildings/Extractor.obj" id="3_ktxfv"]
+[ext_resource type="Texture2D" uid="uid://1iw5wjtt7kva" path="res://Resources/PLACEHOLDER.png" id="4_x0gic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83vie"]
 
@@ -11,13 +14,25 @@ sky_material = SubResource("ProceduralSkyMaterial_83vie")
 background_mode = 2
 sky = SubResource("Sky_tjy36")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a77s"]
+transparency = 1
+albedo_texture = ExtResource("2_hpb7a")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aid0g"]
+albedo_texture = ExtResource("4_x0gic")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t867w"]
+
 [node name="Base_View" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3luld")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.523753, -0.795085, 0.305814, 0.399248, 0.546229, 0.736366, -0.752518, -0.263578, 0.603526, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.548775, 0.83597, 0, -0.83597, 0.548775, 0, 5.81209, 0)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_right = 40.0
@@ -25,10 +40,36 @@ offset_bottom = 40.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524372, 2.45915)
+transform = Transform3D(1, 0, 0, 0, 0.888609, 0.458665, 0, -0.458665, 0.888609, 0, 2.77679, 3.74492)
 
 [node name="Control" parent="SubViewportContainer/SubViewport/Camera3D" instance=ExtResource("1_tjy36")]
+
+[node name="Extractor" type="MeshInstance3D" parent="SubViewportContainer"]
+transform = Transform3D(-0.371391, 0, -0.334766, 0, 0.5, 0, 0.334766, 0, -0.371391, -0.167254, 0.616103, 0.302239)
+material_override = SubResource("StandardMaterial3D_6a77s")
+mesh = ExtResource("3_ktxfv")
+
+[node name="Extractor" type="MeshInstance3D" parent="SubViewportContainer/Extractor"]
+transform = Transform3D(-0.311032, 0, 0.391483, 0, 0.5, 0, -0.391483, 0, -0.311032, 2.94944, 0, 2.65858)
+material_override = SubResource("StandardMaterial3D_6a77s")
+mesh = ExtResource("3_ktxfv")
+
+[node name="Extractor2" type="MeshInstance3D" parent="SubViewportContainer/Extractor"]
+transform = Transform3D(0.288573, 0, 0.408321, 0, 0.5, 0, -0.408321, 0, 0.288573, -3.24373, 0, -2.92384)
+material_override = SubResource("StandardMaterial3D_6a77s")
+mesh = ExtResource("3_ktxfv")
+
+[node name="Extractor" type="MeshInstance3D" parent="SubViewportContainer/Extractor/Extractor2"]
+transform = Transform3D(-0.311032, 0, 0.391483, 0, 0.5, 0, -0.391483, 0, -0.311032, 2.94944, 0, 2.65858)
+material_override = SubResource("StandardMaterial3D_6a77s")
+mesh = ExtResource("3_ktxfv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, -11.3209)
+material_override = SubResource("StandardMaterial3D_aid0g")
+mesh = SubResource("PlaneMesh_t867w")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://2mqfabn64ya2"]
+[gd_scene load_steps=12 format=3 uid="uid://2mqfabn64ya2"]
 
 [ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
 [ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="3_s1n6v"]
 [ext_resource type="Texture2D" uid="uid://cgey8ueceh20c" path="res://Resources/UI/IconHatch.png" id="6_flye1"]
 [ext_resource type="Texture2D" uid="uid://br6kmgvugldet" path="res://Resources/UI/HudCenter.png" id="6_y25jp"]
-[ext_resource type="Texture2D" uid="uid://7pgqfg7bbiho" path="res://Resources/UI/HudTab.png" id="7_05y6h"]
 [ext_resource type="Texture2D" uid="uid://kpnshf3ymghj" path="res://Resources/UI/HudRight.png" id="7_35785"]
 [ext_resource type="Texture2D" uid="uid://bnas24eb8r3d2" path="res://Resources/UI/IconButton.png" id="8_o75o0"]
 
@@ -29,6 +28,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -13.0
+offset_right = 15.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p4rh7")
@@ -130,7 +133,7 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 254.0
+offset_left = 245.0
 offset_top = -312.0
 offset_right = 482.0
 offset_bottom = -32.0
@@ -139,14 +142,29 @@ grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
-theme_override_constants/separation = 30
 
 [node name="Button_Template" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="HudTab" type="Sprite2D" parent="."]
-position = Vector2(931, 724)
-scale = Vector2(5, 5)
-texture = ExtResource("7_05y6h")
+[node name="Button_Template2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
+
+[node name="Button_Template8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+layout_mode = 2
