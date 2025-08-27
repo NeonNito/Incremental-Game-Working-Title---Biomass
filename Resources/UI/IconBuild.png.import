@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgey8ueceh20c"
-path="res://.godot/imported/IconHatch.png-ec9cabef1153c8d3252de611f6e04ba3.ctex"
+uid="uid://d4i6msi77f3ct"
+path="res://.godot/imported/IconBuild.png-5abc77afae270ee61e9046f5a2c93b08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/UI/IconHatch.png"
-dest_files=["res://.godot/imported/IconHatch.png-ec9cabef1153c8d3252de611f6e04ba3.ctex"]
+source_file="res://Resources/UI/IconBuild.png"
+dest_files=["res://.godot/imported/IconBuild.png-5abc77afae270ee61e9046f5a2c93b08.ctex"]
 
 [params]
 

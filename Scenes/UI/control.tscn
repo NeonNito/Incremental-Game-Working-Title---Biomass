@@ -1,28 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://2mqfabn64ya2"]
+[gd_scene load_steps=18 format=3 uid="uid://2mqfabn64ya2"]
 
 [ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
-[ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="3_s1n6v"]
-[ext_resource type="Texture2D" uid="uid://cgey8ueceh20c" path="res://Resources/UI/IconHatch.png" id="6_flye1"]
+[ext_resource type="Texture2D" uid="uid://cuqxtaasvgkny" path="res://Resources/UI/HudLeft.png" id="3_1yqho"]
+[ext_resource type="StyleBox" uid="uid://60vhfr70kll8" path="res://Scenes/UI/TEST.tres" id="4_igvd3"]
+[ext_resource type="Texture2D" uid="uid://d4i6msi77f3ct" path="res://Resources/UI/IconBuild.png" id="5_35785"]
+[ext_resource type="Texture2D" uid="uid://bnfx8t1v1guuf" path="res://Resources/UI/IconBack.png" id="5_y25jp"]
+[ext_resource type="Texture2D" uid="uid://coi30fngtkueb" path="res://Resources/UI/IconExt.png" id="6_05y6h"]
 [ext_resource type="Texture2D" uid="uid://br6kmgvugldet" path="res://Resources/UI/HudCenter.png" id="6_y25jp"]
-[ext_resource type="Texture2D" uid="uid://7pgqfg7bbiho" path="res://Resources/UI/HudTab.png" id="7_05y6h"]
 [ext_resource type="Texture2D" uid="uid://kpnshf3ymghj" path="res://Resources/UI/HudRight.png" id="7_35785"]
+[ext_resource type="Texture2D" uid="uid://7qqe0t6ugphs" path="res://Resources/UI/IconReft.png" id="7_y25jp"]
+[ext_resource type="Texture2D" uid="uid://d1wia8kvbljjm" path="res://Resources/UI/IconSpawn.png" id="8_35785"]
 [ext_resource type="Texture2D" uid="uid://bnas24eb8r3d2" path="res://Resources/UI/IconButton.png" id="8_o75o0"]
+[ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="10_u14jh"]
+[ext_resource type="Texture2D" uid="uid://kf3pseh8hcct" path="res://Resources/UI/HudExpandVert.png" id="11_3sqhd"]
+[ext_resource type="Texture2D" uid="uid://dpyolp7dxouwv" path="res://Resources/UI/HudBox.png" id="12_1yqho"]
+[ext_resource type="Texture2D" uid="uid://d7olcrilpylp" path="res://Resources/UI/HudExpand.png" id="12_3sqhd"]
+[ext_resource type="Texture2D" uid="uid://b6t2qdbhcdrrb" path="res://Resources/UI/TankBack.png" id="13_igvd3"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4bwep"]
-texture = ExtResource("6_y25jp")
-region_rect = Rect2(0, 0, 102, 52)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u14jh"]
-load_path = "res://.godot/imported/HudLeft.png-c473ae90ab051c5cc41b20d733456322.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xd6nj"]
-texture = SubResource("CompressedTexture2D_u14jh")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3sqhd"]
-texture = ExtResource("7_35785")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yqho"]
-texture = ExtResource("8_o75o0")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfj7r"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,78 +28,221 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p4rh7")
 
-[node name="HudCenter" type="PanelContainer" parent="."]
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -335.0
+offset_top = -336.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_4bwep")
+theme_override_constants/separation = 0
 
-[node name="HudLeft" type="PanelContainer" parent="."]
+[node name="CenterTex" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="CenterTex2" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="CenterTex3" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="CenterTex4" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="CenterTex5" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="CenterTex6" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_y25jp")
+stretch_mode = 6
+
+[node name="HudLef" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -450.0
-offset_right = 500.0
+offset_top = -464.0
+offset_right = 541.0
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_xd6nj")
+texture = ExtResource("3_1yqho")
+stretch_mode = 4
 
-[node name="HudRight" type="PanelContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="HudLef"]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -500.0
-offset_top = -450.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_3sqhd")
+offset_right = -175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 60
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.021
-anchor_top = 0.648
-anchor_right = 0.152
-anchor_bottom = 0.963
-offset_left = -2.32
-offset_top = 46.16
-offset_right = 9.15997
-offset_bottom = -31.04
-grow_vertical = 0
+[node name="MainMenu" type="GridContainer" parent="HudLef/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 columns = 3
 
-[node name="Button" type="Button" parent="GridContainer"]
+[node name="Button" type="Button" parent="HudLef/MarginContainer/MainMenu"]
 custom_minimum_size = Vector2(85, 85)
 layout_mode = 2
-theme_override_constants/icon_max_width = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_1yqho")
-icon = ExtResource("6_flye1")
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("5_35785")
 icon_alignment = 1
 expand_icon = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_constants/icon_max_width = 100
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("8_35785")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect3" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_constants/icon_max_width = 100
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("8_35785")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect5" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+
+[node name="BuildMenu" type="GridContainer" parent="HudLef/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Button" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mfj7r")
+theme_override_styles/hover = ExtResource("4_igvd3")
+theme_override_styles/pressed = ExtResource("4_igvd3")
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("5_y25jp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_constants/icon_max_width = 100
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("6_05y6h")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_constants/icon_max_width = 100
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("7_y25jp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureButton" type="TextureButton" parent="HudLef/MarginContainer/BuildMenu"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+texture_normal = ExtResource("8_o75o0")
+stretch_mode = 0
+
+[node name="BuildMenu2" type="GridContainer" parent="HudLef/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Button" type="Button" parent="HudLef/MarginContainer/BuildMenu2"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("5_y25jp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HudRight" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -308.0
-offset_top = -406.0
-offset_right = -25.0
-offset_bottom = -29.0
+offset_left = -541.0
+offset_top = -464.0
 grow_horizontal = 0
 grow_vertical = 0
+texture = ExtResource("7_35785")
+stretch_mode = 4
 
-[node name="BioMassTotal" type="RichTextLabel" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HudRight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HudRight/MarginContainer"]
+layout_mode = 2
+
+[node name="BioMassTotal" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Biomass: 100"
@@ -115,7 +253,7 @@ tab_size = 13
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Supply: 0/20"
@@ -123,30 +261,173 @@ tab_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="RichTextLabel2" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Hive Capacity: 0/100
+"
+tab_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 254.0
-offset_top = -312.0
-offset_right = 482.0
+offset_left = -463.0
+offset_top = -335.0
+offset_right = 37.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Extractor: 
+The most basic biomass gathering structure we can morph.
+Extracts Biomass from ground soil and other small organic life, this is a slow process, and these buildings peridoiclly migrate from one side of the hive to another.
+
+Produces: 0.1 Biomass Per Second
+
+Cost: 10 Biomass 
+Size: 5 Units"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = -315.0
+offset_right = 446.0
 offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Button_Template" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_s1n6v")]
+[node name="Button_Template" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
+layout_mode = 2
+text = "Morph 1"
+
+[node name="Button_Template2" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
+layout_mode = 2
+text = "Morph 10"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -339.0
+offset_bottom = 600.0
+grow_horizontal = 0
+theme_override_constants/separation = 0
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(40, 80)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_1yqho")
+stretch_mode = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/TextureRect/MarginContainer3"]
+layout_mode = 2
+text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 339.0
+offset_bottom = 600.0
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_1yqho")
+stretch_mode = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer2/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer2/TextureRect/MarginContainer3"]
+layout_mode = 2
+text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(40, 80)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 128.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(40, 0)
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("13_igvd3")
+stretch_mode = 4
+flip_v = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-
-[node name="HudTab" type="Sprite2D" parent="."]
-position = Vector2(931, 724)
-scale = Vector2(5, 5)
-texture = ExtResource("7_05y6h")
+size_flags_vertical = 0
+texture_normal = ExtResource("12_3sqhd")
+flip_v = true
