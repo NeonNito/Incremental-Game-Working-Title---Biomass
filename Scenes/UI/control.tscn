@@ -1,23 +1,20 @@
-[gd_scene load_steps=18 format=3 uid="uid://2mqfabn64ya2"]
+[gd_scene load_steps=16 format=3 uid="uid://2mqfabn64ya2"]
 
 [ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
 [ext_resource type="Texture2D" uid="uid://cuqxtaasvgkny" path="res://Resources/UI/HudLeft.png" id="3_1yqho"]
 [ext_resource type="StyleBox" uid="uid://60vhfr70kll8" path="res://Scenes/UI/TEST.tres" id="4_igvd3"]
 [ext_resource type="Texture2D" uid="uid://d4i6msi77f3ct" path="res://Resources/UI/IconBuild.png" id="5_35785"]
-[ext_resource type="Texture2D" uid="uid://bnfx8t1v1guuf" path="res://Resources/UI/IconBack.png" id="5_y25jp"]
-[ext_resource type="Texture2D" uid="uid://coi30fngtkueb" path="res://Resources/UI/IconExt.png" id="6_05y6h"]
 [ext_resource type="Texture2D" uid="uid://br6kmgvugldet" path="res://Resources/UI/HudCenter.png" id="6_y25jp"]
+[ext_resource type="FontFile" uid="uid://ckaovmp16fsda" path="res://Resources/Font/Eurostile Extended Regular.ttf" id="7_1yqho"]
 [ext_resource type="Texture2D" uid="uid://kpnshf3ymghj" path="res://Resources/UI/HudRight.png" id="7_35785"]
-[ext_resource type="Texture2D" uid="uid://7qqe0t6ugphs" path="res://Resources/UI/IconReft.png" id="7_y25jp"]
-[ext_resource type="Texture2D" uid="uid://d1wia8kvbljjm" path="res://Resources/UI/IconSpawn.png" id="8_35785"]
-[ext_resource type="Texture2D" uid="uid://bnas24eb8r3d2" path="res://Resources/UI/IconButton.png" id="8_o75o0"]
 [ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="10_u14jh"]
 [ext_resource type="Texture2D" uid="uid://kf3pseh8hcct" path="res://Resources/UI/HudExpandVert.png" id="11_3sqhd"]
 [ext_resource type="Texture2D" uid="uid://dpyolp7dxouwv" path="res://Resources/UI/HudBox.png" id="12_1yqho"]
 [ext_resource type="Texture2D" uid="uid://d7olcrilpylp" path="res://Resources/UI/HudExpand.png" id="12_3sqhd"]
 [ext_resource type="Texture2D" uid="uid://b6t2qdbhcdrrb" path="res://Resources/UI/TankBack.png" id="13_igvd3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfj7r"]
+[ext_resource type="Script" uid="uid://dipd85a80ruqf" path="res://Scenes/UI/h_box_container.gd" id="13_mfj7r"]
+[ext_resource type="Script" uid="uid://bgtp1m6g5pgqx" path="res://Scenes/UI/h_box_container_2.gd" id="16_qgkyo"]
+[ext_resource type="Script" uid="uid://gmahd20i25eh" path="res://Scenes/UI/v_box_container_2.gd" id="17_iugnl"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -80,7 +77,7 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -464.0
+offset_top = -400.0
 offset_right = 541.0
 grow_vertical = 0
 texture = ExtResource("3_1yqho")
@@ -88,15 +85,15 @@ stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="HudLef"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.675
 anchor_bottom = 1.0
-offset_right = -175.0
+offset_right = -0.175018
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 40
+theme_override_constants/margin_left = 35
 theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 30
+theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 60
 
 [node name="MainMenu" type="GridContainer" parent="HudLef/MarginContainer"]
@@ -106,109 +103,26 @@ theme_override_constants/v_separation = 10
 columns = 3
 
 [node name="Button" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_styles/normal = ExtResource("4_igvd3")
 icon = ExtResource("5_35785")
 icon_alignment = 1
 expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
+[node name="Button2" type="Button" parent="HudLef/MarginContainer/MainMenu"]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
+theme_override_styles/normal = ExtResource("4_igvd3")
+icon = ExtResource("5_35785")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button3" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-theme_override_constants/icon_max_width = 100
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("8_35785")
-icon_alignment = 1
-expand_icon = true
-
-[node name="TextureRect3" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-
-[node name="TextureRect4" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-
-[node name="Button4" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-theme_override_constants/icon_max_width = 100
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("8_35785")
-icon_alignment = 1
-expand_icon = true
-
-[node name="TextureRect5" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-
-[node name="TextureRect6" type="TextureRect" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-
-[node name="BuildMenu" type="GridContainer" parent="HudLef/MarginContainer"]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 3
-
-[node name="Button" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mfj7r")
-theme_override_styles/hover = ExtResource("4_igvd3")
-theme_override_styles/pressed = ExtResource("4_igvd3")
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("5_y25jp")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button2" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-theme_override_constants/icon_max_width = 100
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("6_05y6h")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button3" type="Button" parent="HudLef/MarginContainer/BuildMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-theme_override_constants/icon_max_width = 100
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("7_y25jp")
-icon_alignment = 1
-expand_icon = true
-
-[node name="TextureButton" type="TextureButton" parent="HudLef/MarginContainer/BuildMenu"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-texture_normal = ExtResource("8_o75o0")
-stretch_mode = 0
-
-[node name="BuildMenu2" type="GridContainer" parent="HudLef/MarginContainer"]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 3
-
-[node name="Button" type="Button" parent="HudLef/MarginContainer/BuildMenu2"]
-custom_minimum_size = Vector2(85, 85)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("5_y25jp")
+icon = ExtResource("5_35785")
 icon_alignment = 1
 expand_icon = true
 
@@ -219,8 +133,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -541.0
-offset_top = -464.0
+offset_left = -466.0
+offset_top = -400.0
+offset_right = 1.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("7_35785")
@@ -290,6 +205,9 @@ theme_override_constants/margin_bottom = 50
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.270588, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_1yqho")
 text = "Extractor: 
 The most basic biomass gathering structure we can morph.
 Extracts Biomass from ground soil and other small organic life, this is a slow process, and these buildings peridoiclly migrate from one side of the hive to another.
@@ -321,21 +239,24 @@ theme_override_constants/separation = 30
 
 [node name="Button_Template" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("7_1yqho")
 text = "Morph 1"
 
 [node name="Button_Template2" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("7_1yqho")
 text = "Morph 10"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 1.156
+anchor_right = 1.156
 offset_left = -339.0
 offset_bottom = 600.0
 grow_horizontal = 0
 theme_override_constants/separation = 0
+script = ExtResource("13_mfj7r")
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(40, 80)
@@ -358,10 +279,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/TextureRect/MarginContainer3"]
 layout_mode = 2
@@ -370,9 +291,13 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 1
-offset_right = 339.0
+anchors_preset = -1
+anchor_left = -0.155
+anchor_right = -0.155
+offset_right = 340.0
 offset_bottom = 600.0
 theme_override_constants/separation = 0
+script = ExtResource("16_qgkyo")
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
 layout_mode = 2
@@ -387,10 +312,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer2/TextureRect/MarginContainer3"]
 layout_mode = 2
@@ -408,9 +333,11 @@ flip_h = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = -0.474
 anchor_right = 0.5
+anchor_bottom = -0.474
 offset_left = -40.0
 offset_right = 40.0
 offset_bottom = 128.0
@@ -418,6 +345,7 @@ grow_horizontal = 2
 scale = Vector2(4, 4)
 pivot_offset = Vector2(40, 0)
 theme_override_constants/separation = 0
+script = ExtResource("17_iugnl")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
 layout_mode = 2
@@ -431,3 +359,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 texture_normal = ExtResource("12_3sqhd")
 flip_v = true
+
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="HBoxContainer" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/TextureButton" to="HBoxContainer2" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/TextureButton" to="VBoxContainer2" method="_on_texture_button_pressed"]
