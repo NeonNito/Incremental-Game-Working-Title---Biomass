@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=3 uid="uid://duc4o87ruij0h"]
+
+[ext_resource type="Texture2D" uid="uid://bx1g2bwcqxoe6" path="res://Resources/UI/HudMaw_Muscle.png" id="1_3d7ey"]
+[ext_resource type="Script" uid="uid://dkxbea3o5mq4" path="res://Scenes/UI/texture_rect.gd" id="2_6d1b6"]
+[ext_resource type="Texture2D" uid="uid://cd0m3avfeirmx" path="res://Resources/UI/HudMaw_JawLower.png" id="3_yteai"]
+[ext_resource type="Texture2D" uid="uid://byb10w3s5nbvg" path="res://Resources/UI/HudMaw_JawUpper.png" id="4_umghh"]
+[ext_resource type="PackedScene" uid="uid://nvsl3cmbv7t" path="res://Classes/Resouces/Biomass/BiomassButton.tscn" id="8_8jvj0"]
+
+[sub_resource type="Animation" id="Animation_3d7ey"]
+resource_name = "mawClose"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.3, 0.3),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g3gri"]
+resource_name = "mawEat"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("jawLower:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 0.378929, 1),
+"update": 0,
+"values": [Vector2(2, 25), Vector2(1.5, 11), Vector2(2, 25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("jawUpper:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 0.378929, 1),
+"update": 0,
+"values": [Vector2(1.5, -9.5), Vector2(1.5, 4), Vector2(1.5, -9.5)]
+}
+
+[sub_resource type="Animation" id="Animation_wh2er"]
+resource_name = "mawIdle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("jawLower:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 25), Vector2(2, 23), Vector2(2, 25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("jawUpper:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.5, -9.5), Vector2(1.5, -7), Vector2(1.5, -9.5)]
+}
+
+[sub_resource type="Animation" id="Animation_yteai"]
+resource_name = "mawOpen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.3, 0.3),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(6, 6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g3gri"]
+_data = {
+&"mawClose": SubResource("Animation_3d7ey"),
+&"mawEat": SubResource("Animation_g3gri"),
+&"mawIdle": SubResource("Animation_wh2er"),
+&"mawOpen": SubResource("Animation_yteai")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhhqf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_op5h0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_se8s0"]
+
+[node name="TextureRect" type="TextureRect"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -166.0
+offset_right = 30.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(30, 50)
+texture = ExtResource("1_3d7ey")
+script = ExtResource("2_6d1b6")
+
+[node name="jawLower" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_right = 28.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yteai")
+stretch_mode = 2
+
+[node name="jawUpper" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -34.5
+offset_right = 27.5
+offset_bottom = -9.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_umghh")
+stretch_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g3gri")
+}
+playback_auto_capture_transition_type = 1
+playback_auto_capture_ease_type = 3
+speed_scale = 2.5
+
+[node name="BiomassButton" parent="." instance=ExtResource("8_8jvj0")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -5.0
+offset_right = -5.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lhhqf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_op5h0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_se8s0")

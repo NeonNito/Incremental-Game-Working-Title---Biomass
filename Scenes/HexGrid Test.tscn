@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=4 uid="uid://716fyhganeyo"]
+
+[ext_resource type="Texture2D" uid="uid://bn4ul0a1uoxu1" path="res://Resources/UI/TerrainTiles.png" id="1_5wpg7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtc0h"]
+texture = ExtResource("1_5wpg7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n1gd1"]
+tile_shape = 3
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dtc0h")
+
+[node name="HexGridTest" type="Node2D"]
+
+[node name="Terrain" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD//wAAAAABAAEAAAD/////AAABAAEAAAAAAAAAAAABAAEAAAD+////AAABAAEAAAAAAP//AAABAAEAAAD///7/AAABAAEAAAAAAP7/AAABAAEAAAD+/wAAAAAAAAAAAAD9////AAAAAAAAAAD+//7/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_n1gd1")
+occlusion_enabled = false
+
+[node name="Structures" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD//wAAAAABAAEAAAD/////AAACAAEAAAD+////AAABAAEAAAAAAP//AAABAAEAAAD///7/AAABAAEAAAAAAP7/AAABAAEAAAD+/wAAAAADAAAAAAD9////AAADAAAAAAD+//7/AAADAAAAAAD+//3/AAADAAAAAAD///3/AAAAAAAAAAAAAP3/AAADAAEAAAABAP7/AAADAAEAAAABAP//AAADAAEAAAABAAAAAAADAAEAAAAAAAEAAAADAAEAAAD//wEAAAADAAEAAAD+/wEAAAAAAAAAAAABAAEAAAADAAEAAAACAAAAAAAAAAEAAAACAP//AAAAAAEAAAACAP7/AAAAAAEAAAABAP3/AAAAAAEAAAACAAEAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_n1gd1")

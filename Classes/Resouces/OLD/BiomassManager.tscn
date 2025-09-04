@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ebgtrbxrkysl"]
+
+[ext_resource type="Script" uid="uid://m0pfl8noanc6" path="res://Classes/Resouces/OLD/biomass_manager.gd" id="1_gsoep"]
+
+[node name="BiomassManager" type="Node"]
+script = ExtResource("1_gsoep")

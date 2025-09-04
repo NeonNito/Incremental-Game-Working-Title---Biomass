@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://di71cjmeeb451"]
+
+[ext_resource type="Script" uid="uid://cpww2ppngfpwc" path="res://Classes/Resouces/OLD/biomass_production_manager.gd" id="1_ef0gb"]
+
+[node name="BiomassProductionManager" type="Node"]
+script = ExtResource("1_ef0gb")

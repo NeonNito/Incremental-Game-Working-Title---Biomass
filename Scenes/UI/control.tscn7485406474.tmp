@@ -1,0 +1,465 @@
+[gd_scene load_steps=29 format=3 uid="uid://2mqfabn64ya2"]
+
+[ext_resource type="Theme" uid="uid://bhwkuv1t261" path="res://NewUI.tres" id="1_3sqhd"]
+[ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
+[ext_resource type="Texture2D" uid="uid://cuqxtaasvgkny" path="res://Resources/UI/HudLeft.png" id="3_1yqho"]
+[ext_resource type="PackedScene" uid="uid://duc4o87ruij0h" path="res://MawButton.tscn" id="3_4df45"]
+[ext_resource type="Texture2D" uid="uid://diujci8x4otw3" path="res://Resources/UI/IconButton_hover.png" id="5_igvd3"]
+[ext_resource type="Texture2D" uid="uid://bnas24eb8r3d2" path="res://Resources/UI/IconButton.png" id="6_mfj7r"]
+[ext_resource type="Texture2D" uid="uid://br6kmgvugldet" path="res://Resources/UI/HudCenter.png" id="6_y25jp"]
+[ext_resource type="FontFile" uid="uid://ckaovmp16fsda" path="res://Resources/Font/Eurostile Extended Regular.ttf" id="7_1yqho"]
+[ext_resource type="Texture2D" uid="uid://kpnshf3ymghj" path="res://Resources/UI/HudRight.png" id="7_35785"]
+[ext_resource type="Texture2D" uid="uid://bnfx8t1v1guuf" path="res://Resources/UI/IconBack.png" id="9_ri15a"]
+[ext_resource type="Texture2D" uid="uid://coi30fngtkueb" path="res://Resources/UI/IconExt.png" id="10_tmh5d"]
+[ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="10_u14jh"]
+[ext_resource type="Texture2D" uid="uid://kf3pseh8hcct" path="res://Resources/UI/HudExpandVert.png" id="11_3sqhd"]
+[ext_resource type="Texture2D" uid="uid://7qqe0t6ugphs" path="res://Resources/UI/IconReft.png" id="11_pg8pc"]
+[ext_resource type="Texture2D" uid="uid://dpyolp7dxouwv" path="res://Resources/UI/HudBox.png" id="12_1yqho"]
+[ext_resource type="Texture2D" uid="uid://d7olcrilpylp" path="res://Resources/UI/HudExpand.png" id="12_3sqhd"]
+[ext_resource type="Texture2D" uid="uid://d4i6msi77f3ct" path="res://Resources/UI/IconBuild.png" id="12_6o3dm"]
+[ext_resource type="Texture2D" uid="uid://b6t2qdbhcdrrb" path="res://Resources/UI/TankBack.png" id="13_igvd3"]
+[ext_resource type="Script" uid="uid://dipd85a80ruqf" path="res://Scenes/UI/h_box_container.gd" id="13_mfj7r"]
+[ext_resource type="Script" uid="uid://bgtp1m6g5pgqx" path="res://Scenes/UI/h_box_container_2.gd" id="16_qgkyo"]
+[ext_resource type="Script" uid="uid://gmahd20i25eh" path="res://Scenes/UI/v_box_container_2.gd" id="17_iugnl"]
+[ext_resource type="Texture2D" uid="uid://c77edjk15n13a" path="res://Resources/UI/HudMaw_BaseButton_Normal.png" id="18_01m0r"]
+[ext_resource type="Texture2D" uid="uid://d1sw8meq1u0hg" path="res://Resources/UI/HudMaw_BaseButton_Pressed.png" id="19_w0k1s"]
+[ext_resource type="Texture2D" uid="uid://donada61p1k2d" path="res://Resources/UI/HudMaw_BaseButton_Hover.png" id="20_kgum1"]
+[ext_resource type="Script" uid="uid://dcc2s2os1t2ux" path="res://h_box_container.gd" id="25_pg8pc"]
+[ext_resource type="Texture2D" uid="uid://cm4imsytwna8o" path="res://Resources/UI/HudBoxRect2.png" id="26_6o3dm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qgkyo"]
+texture = ExtResource("5_igvd3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iugnl"]
+texture = ExtResource("6_mfj7r")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3sqhd")
+script = ExtResource("1_p4rh7")
+
+[node name="TextureRect" parent="." instance=ExtResource("3_4df45")]
+layout_mode = 1
+offset_top = -398.0
+offset_bottom = -348.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -52.0
+offset_right = -1308.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(0, 52)
+theme_override_constants/separation = 0
+
+[node name="CenterTex" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="CenterTex2" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="CenterTex3" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="CenterTex4" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="CenterTex5" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="CenterTex6" type="TextureRect" parent="HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("6_y25jp")
+stretch_mode = 2
+
+[node name="HudLef" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -400.0
+offset_right = 77.0
+offset_bottom = -334.0
+grow_vertical = 0
+scale = Vector2(6, 6)
+texture = ExtResource("3_1yqho")
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HudLef"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -26.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="GridContainer" type="GridContainer" parent="HudLef/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 3
+
+[node name="Button" type="Button" parent="HudLef/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_1yqho")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("9_ri15a")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="HudLef/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("10_tmh5d")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="HudLef/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("11_pg8pc")
+expand_icon = true
+
+[node name="Button4" type="Button" parent="HudLef/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("12_6o3dm")
+expand_icon = true
+
+[node name="HudRight" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(77, 66)
+texture = ExtResource("7_35785")
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HudRight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 140.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.16, 0.16)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HudRight/MarginContainer"]
+layout_mode = 2
+
+[node name="BioMassTotal" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Biomass: 100"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Supply: 0/20"
+tab_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Hive Capacity: 0/100
+"
+tab_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -463.0
+offset_top = -335.0
+offset_right = 37.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.270588, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_1yqho")
+text = "Extractor: 
+The most basic biomass gathering structure we can morph.
+Extracts Biomass from ground soil and other small organic life, this is a slow process, and these buildings peridoiclly migrate from one side of the hive to another.
+
+Produces: 0.1 Biomass Per Second
+
+Cost: 10 Biomass 
+Size: 5 Units"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = -315.0
+offset_right = 446.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Button_Template" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_1yqho")
+text = "Morph 1"
+
+[node name="Button_Template2" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_1yqho")
+text = "Morph 10"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.156
+anchor_right = 1.156
+offset_left = -339.0
+offset_bottom = 600.0
+grow_horizontal = 0
+theme_override_constants/separation = 0
+script = ExtResource("13_mfj7r")
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(40, 80)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_1yqho")
+stretch_mode = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/TextureRect/MarginContainer3"]
+layout_mode = 2
+text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.155
+anchor_right = -0.155
+offset_right = 340.0
+offset_bottom = 600.0
+theme_override_constants/separation = 0
+script = ExtResource("16_qgkyo")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_1yqho")
+stretch_mode = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer2/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer2/TextureRect/MarginContainer3"]
+layout_mode = 2
+text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(40, 80)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.474
+anchor_right = 0.5
+anchor_bottom = -0.474
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 128.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(40, 0)
+theme_override_constants/separation = 0
+script = ExtResource("17_iugnl")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("13_igvd3")
+stretch_mode = 4
+flip_v = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("12_3sqhd")
+flip_v = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -316.0
+offset_right = 37.0
+offset_bottom = -307.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(37, 10)
+texture_normal = ExtResource("18_01m0r")
+texture_pressed = ExtResource("19_w0k1s")
+texture_hover = ExtResource("20_kgum1")
+stretch_mode = 1
+
+[node name="LeftInfoBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.2
+anchor_right = -0.2
+offset_right = 80.0
+offset_bottom = 96.0
+scale = Vector2(6, 6)
+theme_override_constants/separation = 0
+script = ExtResource("25_pg8pc")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LeftInfoBox"]
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("26_6o3dm")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureButton" type="TextureButton" parent="LeftInfoBox"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+flip_h = true
+
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="HBoxContainer" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/TextureButton" to="HBoxContainer2" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/TextureButton" to="VBoxContainer2" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureRect" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="LeftInfoBox/TextureButton" to="LeftInfoBox" method="_on_texture_button_pressed"]

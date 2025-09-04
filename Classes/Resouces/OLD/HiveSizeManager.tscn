@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c12jj6p03ai58"]
+
+[ext_resource type="Script" uid="uid://co207a3hf4jo" path="res://Classes/Resouces/OLD/hive_size_manager.gd" id="1_o37vt"]
+
+[node name="HiveSizeManager" type="Node"]
+script = ExtResource("1_o37vt")

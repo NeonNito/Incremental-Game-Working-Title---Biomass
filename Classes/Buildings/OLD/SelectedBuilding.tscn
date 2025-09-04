@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8icblmy4mrb"]
+
+[ext_resource type="Script" uid="uid://d32sr7swdmm1m" path="res://Classes/Buildings/OLD/selected_building.gd" id="1_6ulmt"]
+
+[node name="SelectedBuilding" type="Node"]
+script = ExtResource("1_6ulmt")

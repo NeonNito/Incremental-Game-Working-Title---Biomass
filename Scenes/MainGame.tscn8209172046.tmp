@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0wev52u0wyye"]
+
+[ext_resource type="Script" uid="uid://d012w5it6vpgr" path="res://Scenes/main_game.gd" id="1_yprpe"]
+[ext_resource type="PackedScene" uid="uid://exsavjkup8tq" path="res://Classes/Clock.tscn" id="2_ybmw1"]
+[ext_resource type="PackedScene" uid="uid://2mqfabn64ya2" path="res://Scenes/UI/control.tscn" id="2_yprpe"]
+[ext_resource type="PackedScene" uid="uid://dnme6elkcw1ji" path="res://Classes/ResourceController.tscn" id="3_ybmw1"]
+[ext_resource type="PackedScene" uid="uid://ci3uemxo45dps" path="res://Classes/biomassController.tscn" id="4_321ql"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_yprpe")
+
+[node name="Main Processes" type="Node" parent="."]
+
+[node name="Clock" parent="Main Processes" instance=ExtResource("2_ybmw1")]
+
+[node name="ResourceController" parent="Main Processes" instance=ExtResource("3_ybmw1")]
+
+[node name="Resources" type="Node" parent="Main Processes/ResourceController"]
+
+[node name="BiomassController" parent="Main Processes/ResourceController/Resources" instance=ExtResource("4_321ql")]
+
+[node name="Buildings" type="Node" parent="."]
+
+[node name="Control" parent="." instance=ExtResource("2_yprpe")]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3

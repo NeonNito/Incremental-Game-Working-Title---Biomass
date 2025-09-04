@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://gkej6585jqyc"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wh2er"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20, 10, 1)
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 30.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 500, 0)
+scale_min = 6.0
+scale_max = 10.0
+color = Color(1, 0.21, 0.21, 1)
+
+[sub_resource type="Animation" id="Animation_l2whv"]
+resource_name = "Emit"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_6qlte"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r56ay"]
+_data = {
+&"Emit": SubResource("Animation_l2whv"),
+&"RESET": SubResource("Animation_6qlte")
+}
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 24
+lifetime = 15.0
+interp_to_end = 0.064
+one_shot = true
+speed_scale = 1.58
+explosiveness = 1.0
+visibility_rect = Rect2(-200, -200, 400, 400)
+process_material = SubResource("ParticleProcessMaterial_wh2er")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r56ay")
+}
+autoplay = "Emit"

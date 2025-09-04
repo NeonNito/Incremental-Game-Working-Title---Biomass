@@ -1,20 +1,63 @@
-[gd_scene load_steps=16 format=3 uid="uid://2mqfabn64ya2"]
+[gd_scene load_steps=41 format=3 uid="uid://2mqfabn64ya2"]
 
+[ext_resource type="Theme" uid="uid://bhwkuv1t261" path="res://NewUI.tres" id="1_3sqhd"]
 [ext_resource type="Script" uid="uid://bevbds8kups72" path="res://Scenes/UI/Main.gd" id="1_p4rh7"]
 [ext_resource type="Texture2D" uid="uid://cuqxtaasvgkny" path="res://Resources/UI/HudLeft.png" id="3_1yqho"]
-[ext_resource type="StyleBox" uid="uid://60vhfr70kll8" path="res://Scenes/UI/TEST.tres" id="4_igvd3"]
-[ext_resource type="Texture2D" uid="uid://d4i6msi77f3ct" path="res://Resources/UI/IconBuild.png" id="5_35785"]
+[ext_resource type="PackedScene" uid="uid://duc4o87ruij0h" path="res://Scenes/UI/MawButton.tscn" id="3_4df45"]
+[ext_resource type="Texture2D" uid="uid://qy3lo3x2y32s" path="res://Resources/UI/TEST.png" id="3_ryt1b"]
+[ext_resource type="Texture2D" uid="uid://diujci8x4otw3" path="res://Resources/UI/IconButton_hover.png" id="5_igvd3"]
+[ext_resource type="Texture2D" uid="uid://bnas24eb8r3d2" path="res://Resources/UI/IconButton.png" id="6_mfj7r"]
 [ext_resource type="Texture2D" uid="uid://br6kmgvugldet" path="res://Resources/UI/HudCenter.png" id="6_y25jp"]
 [ext_resource type="FontFile" uid="uid://ckaovmp16fsda" path="res://Resources/Font/Eurostile Extended Regular.ttf" id="7_1yqho"]
 [ext_resource type="Texture2D" uid="uid://kpnshf3ymghj" path="res://Resources/UI/HudRight.png" id="7_35785"]
-[ext_resource type="PackedScene" uid="uid://dhn33nmrsfedi" path="res://Button_Template.tscn" id="10_u14jh"]
+[ext_resource type="Texture2D" uid="uid://ddyinvwufdw2k" path="res://Resources/UI/IconButton_Pressed.png" id="7_ri15a"]
+[ext_resource type="Texture2D" uid="uid://bnfx8t1v1guuf" path="res://Resources/UI/IconBack.png" id="9_ri15a"]
+[ext_resource type="Texture2D" uid="uid://coi30fngtkueb" path="res://Resources/UI/IconExt.png" id="10_tmh5d"]
 [ext_resource type="Texture2D" uid="uid://kf3pseh8hcct" path="res://Resources/UI/HudExpandVert.png" id="11_3sqhd"]
-[ext_resource type="Texture2D" uid="uid://dpyolp7dxouwv" path="res://Resources/UI/HudBox.png" id="12_1yqho"]
-[ext_resource type="Texture2D" uid="uid://d7olcrilpylp" path="res://Resources/UI/HudExpand.png" id="12_3sqhd"]
-[ext_resource type="Texture2D" uid="uid://b6t2qdbhcdrrb" path="res://Resources/UI/TankBack.png" id="13_igvd3"]
-[ext_resource type="Script" uid="uid://dipd85a80ruqf" path="res://Scenes/UI/h_box_container.gd" id="13_mfj7r"]
-[ext_resource type="Script" uid="uid://bgtp1m6g5pgqx" path="res://Scenes/UI/h_box_container_2.gd" id="16_qgkyo"]
-[ext_resource type="Script" uid="uid://gmahd20i25eh" path="res://Scenes/UI/v_box_container_2.gd" id="17_iugnl"]
+[ext_resource type="Texture2D" uid="uid://7qqe0t6ugphs" path="res://Resources/UI/IconReft.png" id="11_pg8pc"]
+[ext_resource type="Texture2D" uid="uid://d4i6msi77f3ct" path="res://Resources/UI/IconBuild.png" id="12_6o3dm"]
+[ext_resource type="Script" uid="uid://coqdmjm8ib4ai" path="res://Scenes/UI/button_2.gd" id="14_6o3dm"]
+[ext_resource type="Texture2D" uid="uid://dkewfcfvwnnfw" path="res://Resources/UI/HudIcon1.png" id="14_ri15a"]
+[ext_resource type="Texture2D" uid="uid://c77edjk15n13a" path="res://Resources/UI/HudMaw_BaseButton_Normal.png" id="18_01m0r"]
+[ext_resource type="Script" uid="uid://o7j1djurleco" path="res://Scenes/UI/rich_text_label.gd" id="18_hnupx"]
+[ext_resource type="Texture2D" uid="uid://d1sw8meq1u0hg" path="res://Resources/UI/HudMaw_BaseButton_Pressed.png" id="19_w0k1s"]
+[ext_resource type="Texture2D" uid="uid://donada61p1k2d" path="res://Resources/UI/HudMaw_BaseButton_Hover.png" id="20_kgum1"]
+[ext_resource type="Script" uid="uid://x3r55vbwtn8v" path="res://Scenes/UI/nine_patch_rect_2.gd" id="24_pg8pc"]
+[ext_resource type="Texture2D" uid="uid://cm4imsytwna8o" path="res://Resources/UI/HudBoxRect2.png" id="26_6o3dm"]
+[ext_resource type="Script" uid="uid://q1ehhb2kx8qu" path="res://Scenes/UI/h_box_container_2.gd" id="26_pg8pc"]
+[ext_resource type="Texture2D" uid="uid://bntaurq4d8ptg" path="res://Resources/UI/HudExpandVert_HIT.png" id="27_6o3dm"]
+[ext_resource type="PackedScene" uid="uid://birdu4iq83ccm" path="res://Classes/Resouces/Biomass/BiomassLabel.tscn" id="27_ce13b"]
+[ext_resource type="Script" uid="uid://bsm1ebm80see7" path="res://Scenes/UI/texture_button_2.gd" id="28_3vym7"]
+[ext_resource type="Texture2D" uid="uid://bflrpjohsq8wt" path="res://Resources/UI/IconButton_Disabled.png" id="30_6ekyd"]
+[ext_resource type="Script" uid="uid://bkxmne5rb6omm" path="res://Scenes/UI/qty_button.gd" id="35_vgiis"]
+[ext_resource type="Texture2D" uid="uid://b65jv41s5hbti" path="res://Resources/UI/Hud5Icon.png" id="36_ryt1b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qgkyo"]
+texture = ExtResource("5_igvd3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmh5d"]
+texture = ExtResource("7_ri15a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iugnl"]
+texture = ExtResource("6_mfj7r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nuuq4"]
+texture = ExtResource("30_6ekyd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgiis"]
+texture = ExtResource("5_igvd3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2eelc"]
+texture = ExtResource("7_ri15a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gbv58"]
+texture = ExtResource("6_mfj7r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ryt1b"]
+texture = ExtResource("30_6ekyd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg8pc"]
+texture = ExtResource("7_ri15a")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,108 +66,100 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3sqhd")
 script = ExtResource("1_p4rh7")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1002.0
+offset_bottom = -694.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture = ExtResource("3_ryt1b")
+stretch_mode = 1
+
+[node name="MawButton" parent="." instance=ExtResource("3_4df45")]
+layout_mode = 1
+offset_top = -398.0
+offset_bottom = -348.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="HudCenter" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -336.0
+offset_top = -52.0
+offset_right = -1308.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(0, 52)
 theme_override_constants/separation = 0
 
-[node name="CenterTex" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="CenterTex2" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex2" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="CenterTex3" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex3" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="CenterTex4" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex4" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="CenterTex5" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex5" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="CenterTex6" type="TextureRect" parent="HBoxContainer3"]
+[node name="CenterTex6" type="TextureRect" parent="HudCenter"]
 layout_mode = 2
-size_flags_horizontal = 3
 texture = ExtResource("6_y25jp")
-stretch_mode = 6
+stretch_mode = 2
 
-[node name="HudLef" type="TextureRect" parent="."]
+[node name="HudLeft" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -400.0
-offset_right = 541.0
+offset_top = -66.0
+offset_right = 77.0
 grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(0, 66)
 texture = ExtResource("3_1yqho")
 stretch_mode = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="HudLef"]
+[node name="MarginContainer" type="MarginContainer" parent="HudLeft"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.675
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -0.175018
+offset_left = 3.00012
+offset_top = 3.0
+offset_right = -25.9999
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 60
-
-[node name="MainMenu" type="GridContainer" parent="HudLef/MarginContainer"]
-layout_mode = 2
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 3
-
-[node name="Button" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("5_35785")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button2" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("5_35785")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button3" type="Button" parent="HudLef/MarginContainer/MainMenu"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-theme_override_styles/normal = ExtResource("4_igvd3")
-icon = ExtResource("5_35785")
-icon_alignment = 1
-expand_icon = true
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
 
 [node name="HudRight" type="TextureRect" parent="."]
 layout_mode = 1
@@ -133,11 +168,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -466.0
-offset_top = -400.0
-offset_right = 1.0
+offset_left = -77.0
+offset_top = -66.0
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(77, 66)
 texture = ExtResource("7_35785")
 stretch_mode = 4
 
@@ -146,46 +182,76 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 176.0
+offset_left = 26.0001
+offset_top = 3.0
+offset_right = -2.99988
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HudRight/MarginContainer"]
+[node name="Buildings" type="GridContainer" parent="HudRight/MarginContainer"]
+visible = false
 layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 3
 
-[node name="BioMassTotal" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Back" type="Button" parent="HudRight/MarginContainer/Buildings"]
+custom_minimum_size = Vector2(14, 14)
 layout_mode = 2
-text = "Biomass: 100"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
-tab_size = 13
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tmh5d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("9_ri15a")
+expand_icon = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Extractor" type="Button" parent="HudRight/MarginContainer/Buildings"]
+custom_minimum_size = Vector2(14, 14)
 layout_mode = 2
-text = "Supply: 0/20"
-tab_size = 8
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tmh5d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("10_tmh5d")
+expand_icon = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="HudRight/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Refinery" type="Button" parent="HudRight/MarginContainer/Buildings"]
+custom_minimum_size = Vector2(14, 14)
 layout_mode = 2
-text = "Hive Capacity: 0/100
-"
-tab_size = 8
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tmh5d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("11_pg8pc")
+expand_icon = true
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Main Menu" type="GridContainer" parent="HudRight/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 3
+
+[node name="Build" type="Button" parent="HudRight/MarginContainer/Main Menu"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tmh5d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+icon = ExtResource("12_6o3dm")
+expand_icon = true
+script = ExtResource("14_6o3dm")
+
+[node name="BuildDesc" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -193,15 +259,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -463.0
-offset_top = -335.0
+offset_top = -312.0
 offset_right = 37.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_bottom = 50
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+[node name="BuildDisplay" type="RichTextLabel" parent="BuildDesc"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -216,150 +283,237 @@ Produces: 0.1 Biomass Per Second
 
 Cost: 10 Biomass 
 Size: 5 Units"
+script = ExtResource("18_hnupx")
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
+[node name="MawEnabler" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 226.0
-offset_top = -315.0
-offset_right = 446.0
-offset_bottom = -32.0
+offset_left = -37.0
+offset_top = -316.0
+offset_right = 37.0
+offset_bottom = -307.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_bottom = 30
+scale = Vector2(6, 6)
+pivot_offset = Vector2(37, 10)
+texture_normal = ExtResource("18_01m0r")
+texture_pressed = ExtResource("19_w0k1s")
+texture_hover = ExtResource("20_kgum1")
+stretch_mode = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="Button_Template" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("7_1yqho")
-text = "Morph 1"
-
-[node name="Button_Template2" parent="MarginContainer2/VBoxContainer2" instance=ExtResource("10_u14jh")]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("7_1yqho")
-text = "Morph 10"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="LeftInfoPanel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(64, 96)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.156
-anchor_right = 1.156
-offset_left = -339.0
-offset_bottom = 600.0
-grow_horizontal = 0
-theme_override_constants/separation = 0
-script = ExtResource("13_mfj7r")
-
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
-custom_minimum_size = Vector2(40, 80)
-layout_mode = 2
-size_flags_vertical = 4
-texture_normal = ExtResource("11_3sqhd")
-ignore_texture_size = true
-stretch_mode = 4
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
+anchor_left = -0.2
+anchor_right = -0.2
+scale = Vector2(6, 6)
 size_flags_horizontal = 3
-texture = ExtResource("12_1yqho")
-stretch_mode = 4
+texture = ExtResource("26_6o3dm")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("26_pg8pc")
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="LeftInfoPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 64.0
+offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+scale = Vector2(0.5, 0.5)
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/TextureRect/MarginContainer3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftInfoPanel/MarginContainer"]
 layout_mode = 2
-text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
-horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.155
-anchor_right = -0.155
-offset_right = 340.0
-offset_bottom = 600.0
-theme_override_constants/separation = 0
-script = ExtResource("16_qgkyo")
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("12_1yqho")
-stretch_mode = 4
-
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer2/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer2/TextureRect/MarginContainer3"]
-layout_mode = 2
-text = "asdasdasdasdaaaaaaaaaaaaaaaaaaaa"
-horizontal_alignment = 1
-
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
-custom_minimum_size = Vector2(40, 80)
-layout_mode = 2
-size_flags_vertical = 4
-texture_normal = ExtResource("11_3sqhd")
-ignore_texture_size = true
-stretch_mode = 4
-flip_h = true
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = -0.474
-anchor_right = 0.5
-anchor_bottom = -0.474
-offset_left = -40.0
-offset_right = 40.0
-offset_bottom = 128.0
-grow_horizontal = 2
-scale = Vector2(4, 4)
-pivot_offset = Vector2(40, 0)
-theme_override_constants/separation = 0
-script = ExtResource("17_iugnl")
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("13_igvd3")
-stretch_mode = 4
-flip_v = true
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
+[node name="OptionButton" type="OptionButton" parent="LeftInfoPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-texture_normal = ExtResource("12_3sqhd")
-flip_v = true
+theme_override_font_sizes/font_size = 8
+selected = 0
+item_count = 3
+popup/item_0/text = "Buildings"
+popup/item_0/id = 0
+popup/item_1/text = "Units"
+popup/item_1/id = 1
+popup/item_2/text = "Resources"
+popup/item_2/id = 2
 
-[connection signal="pressed" from="HBoxContainer/TextureButton" to="HBoxContainer" method="_on_texture_button_pressed"]
-[connection signal="pressed" from="HBoxContainer2/TextureButton" to="HBoxContainer2" method="_on_texture_button_pressed"]
-[connection signal="pressed" from="VBoxContainer2/TextureButton" to="VBoxContainer2" method="_on_texture_button_pressed"]
+[node name="ScrollContainer" type="ScrollContainer" parent="LeftInfoPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Buildings" type="RichTextLabel" parent="LeftInfoPanel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 8
+
+[node name="RightInfoPanel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.2
+anchor_right = 1.2
+offset_left = -64.0
+offset_bottom = 96.0
+grow_horizontal = 0
+scale = Vector2(6, 6)
+pivot_offset = Vector2(64, 0)
+size_flags_horizontal = 3
+texture = ExtResource("26_6o3dm")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("24_pg8pc")
+
+[node name="LeftInfoButton" type="TextureButton" parent="."]
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 32.0
+scale = Vector2(4, 4)
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+texture_pressed = ExtResource("27_6o3dm")
+flip_h = true
+script = ExtResource("28_3vym7")
+
+[node name="RightInfoButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 32.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(16, 0)
+size_flags_vertical = 4
+texture_normal = ExtResource("11_3sqhd")
+texture_pressed = ExtResource("27_6o3dm")
+script = ExtResource("28_3vym7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = -102.0
+offset_right = 64.0
+offset_bottom = -38.0
+grow_horizontal = 2
+scale = Vector2(6, 6)
+pivot_offset = Vector2(64, 32)
+texture = ExtResource("26_6o3dm")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BiomassLabel" parent="NinePatchRect/MarginContainer/HBoxContainer" instance=ExtResource("27_ce13b")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="BuildConfirmMenu" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = -288.0
+offset_right = 202.0
+offset_bottom = -244.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(6, 6)
+alignment = 1
+
+[node name="Build Button" type="HBoxContainer" parent="BuildConfirmMenu"]
+layout_mode = 2
+
+[node name="Build1Costs" type="RichTextLabel" parent="BuildConfirmMenu/Build Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 3
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuildConfirmMenu/Build Button"]
+layout_mode = 2
+
+[node name="QtyButton" type="Button" parent="BuildConfirmMenu/Build Button/VBoxContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/disabled = SubResource("StyleBoxTexture_nuuq4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vgiis")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2eelc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gbv58")
+icon = ExtResource("14_ri15a")
+expand_icon = true
+script = ExtResource("35_vgiis")
+
+[node name="Build1" type="Button" parent="BuildConfirmMenu/Build Button/VBoxContainer"]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ryt1b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qgkyo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pg8pc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iugnl")
+disabled = true
+icon = ExtResource("36_ryt1b")
+expand_icon = true
+
+[connection signal="pressed" from="HudRight/MarginContainer/Buildings/Back" to="HudRight/MarginContainer/Buildings/Back" method="_on_pressed"]
+[connection signal="pressed" from="HudRight/MarginContainer/Buildings/Extractor" to="HudRight/MarginContainer/Buildings/Extractor" method="_on_pressed"]
+[connection signal="pressed" from="HudRight/MarginContainer/Main Menu/Build" to="HudRight/MarginContainer/Main Menu/Build" method="_on_pressed"]
+[connection signal="pressed" from="MawEnabler" to="MawButton" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="LeftInfoButton" to="LeftInfoPanel" method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="LeftInfoButton" to="LeftInfoButton" method="_on_pressed"]
+[connection signal="pressed" from="RightInfoButton" to="RightInfoPanel" method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="RightInfoButton" to="RightInfoButton" method="_on_pressed"]
+[connection signal="pressed" from="BuildConfirmMenu/Build Button/VBoxContainer/Build1" to="BuildConfirmMenu/Build Button/VBoxContainer/Build1" method="_on_pressed"]

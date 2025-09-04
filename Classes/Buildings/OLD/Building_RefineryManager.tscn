@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cft63t66espe3"]
+
+[ext_resource type="Script" uid="uid://dilfkxo1li8ua" path="res://Classes/Buildings/OLD/building_refinery_manager.gd" id="1_rmcun"]
+
+[node name="BuildingRefineryManager" type="Node"]
+script = ExtResource("1_rmcun")
+
+[node name="Timer" type="Timer" parent="."]

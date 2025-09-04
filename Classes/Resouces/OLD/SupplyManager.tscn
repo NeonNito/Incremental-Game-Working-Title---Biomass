@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://igwypw02wccj"]
+
+[ext_resource type="Script" uid="uid://le8bergpa1nc" path="res://Classes/Resouces/OLD/supply_manager.gd" id="1_kg8tt"]
+
+[node name="SupplyManager" type="Node"]
+script = ExtResource("1_kg8tt")

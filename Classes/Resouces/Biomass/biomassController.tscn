@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci3uemxo45dps"]
+
+[ext_resource type="Script" uid="uid://bmuccmubajqek" path="res://Classes/Resouces/Biomass/biomass_controller.gd" id="1_wotpn"]
+
+[node name="BiomassController" type="Node"]
+script = ExtResource("1_wotpn")

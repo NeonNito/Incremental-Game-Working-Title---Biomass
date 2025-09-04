@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c65h24ytidl5w"]
+
+[ext_resource type="Script" uid="uid://cophqtqvn751" path="res://Classes/_Main Processes/production_controller.gd" id="1_672kj"]
+
+[node name="ProductionController" type="Node"]
+script = ExtResource("1_672kj")

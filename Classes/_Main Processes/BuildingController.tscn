@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://davywl6q0gjfh"]
+
+[ext_resource type="Script" uid="uid://cvnug2j32gdfy" path="res://Classes/_Main Processes/building_controller.gd" id="1_fkk0j"]
+
+[node name="BuildingController" type="Node"]
+script = ExtResource("1_fkk0j")

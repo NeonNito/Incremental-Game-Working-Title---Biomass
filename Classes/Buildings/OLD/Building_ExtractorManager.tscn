@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0dgcdfwre6ym"]
+
+[ext_resource type="Script" uid="uid://oulue34vggbi" path="res://Classes/Buildings/OLD/building_extractor_manager.gd" id="1_3aphi"]
+
+[node name="BuildingExtractorManager" type="Node"]
+script = ExtResource("1_3aphi")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bhwkuv1t261"]
+
+[ext_resource type="FontFile" uid="uid://ckaovmp16fsda" path="res://Resources/Font/Eurostile Extended Regular.ttf" id="1_aec4c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d3anu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3anu"]
+bg_color = Color(0.352941, 0.772549, 0.309804, 1)
+
+[resource]
+Button/colors/font_color = Color(0.2, 0.596078, 0.294118, 1)
+Button/colors/font_focus_color = Color(0.2, 0.596078, 0.294118, 1)
+Button/colors/font_hover_color = Color(0.6, 0.901961, 0.372549, 1)
+Button/colors/font_hover_pressed_color = Color(0.827451, 0.988235, 0.494118, 1)
+Button/colors/font_pressed_color = Color(0.827451, 0.988235, 0.494118, 1)
+Button/font_sizes/font_size = 4
+Button/styles/focus = SubResource("StyleBoxEmpty_d3anu")
+Label/colors/font_color = Color(0.352941, 0.772549, 0.309804, 1)
+Label/colors/font_shadow_color = Color(0.0745098, 0.298039, 0.298039, 1)
+Label/fonts/font = ExtResource("1_aec4c")
+RichTextLabel/colors/default_color = Color(0.2, 0.596078, 0.294118, 1)
+RichTextLabel/colors/selection_color = Color(0.84, 1, 0.906667, 0.8)
+RichTextLabel/font_sizes/bold_font_size = 4
+RichTextLabel/font_sizes/bold_italics_font_size = 4
+RichTextLabel/font_sizes/italics_font_size = 4
+RichTextLabel/font_sizes/mono_font_size = 4
+RichTextLabel/font_sizes/normal_font_size = 10
+RichTextLabel/fonts/bold_font = ExtResource("1_aec4c")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_aec4c")
+RichTextLabel/fonts/italics_font = ExtResource("1_aec4c")
+RichTextLabel/fonts/mono_font = ExtResource("1_aec4c")
+RichTextLabel/fonts/normal_font = ExtResource("1_aec4c")
+TabContainer/font_sizes/font_size = 2
+TabContainer/fonts/font = ExtResource("1_aec4c")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_d3anu")
