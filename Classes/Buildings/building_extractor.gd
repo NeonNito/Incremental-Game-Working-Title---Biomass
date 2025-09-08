@@ -14,15 +14,15 @@ var extractorDict: Dictionary = {
 	"prodcutionTime": 1,
 }
 
-#func getStats():
-	#for totals in extractorDict
-		#var
+func getStats() -> Dictionary:
+	var stats = extractorDict
+	return stats
 #
 #func createExtractor(qty):
 	#resourceCont.ref.
 
-func updateExtractor(qty):
-	buildCont.ref.updateBuilding("extractor", qty)
+#func updateExtractor(qty):
+	#buildCont.ref.updateBuilding("extractor", qty)
 
 func updateCost(resource, qty):
 	extractorDict["cost"] = [resource, qty]

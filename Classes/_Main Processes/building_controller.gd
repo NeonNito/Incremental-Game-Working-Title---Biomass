@@ -27,6 +27,7 @@ func updateBuilding(building, qty):
 		buildingsTotal[building] += qty
 	else: buildingsTotal[building] = qty
 	
+	#signals
 	if qty >= 0:
 		buildingCreated.emit(building, qty)
 		print("%s %s created" %building %qty)
@@ -37,3 +38,7 @@ func updateBuilding(building, qty):
 		
 	if buildingsTotal[building] <= 0:
 		buildingsTotal.erase(building)
+
+func getProdTotal(building):
+	var current = building.ref.getStats()
+	
