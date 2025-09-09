@@ -9,8 +9,7 @@ func _init() -> void:
 signal resource_updated
 
 var bank: Dictionary = {
-	"biomass": [20.0, 100.0],
-	"chitin": [0.0, 20.0],
+	"biomass": [0.0, 200.0],
 	}
 
 #func _ready() -> void:

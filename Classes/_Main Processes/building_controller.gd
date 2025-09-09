@@ -12,12 +12,12 @@ signal buildingCreated(building, qty)
 signal buildingRemoved(building, qty)
 
 func _ready() -> void:
-	updateBuilding("extractor", -1)
+	buildExtractor.ref.buildingCreated.connect(extractorProdTotal)
 	pass
 	
 var buildingsTotal: Dictionary = {
-	"extractor": 1
 }
+
 func getBuildingTotal(building) -> int:
 	var total = buildingsTotal.get(building)
 	return total
@@ -35,10 +35,13 @@ func updateBuilding(building, qty):
 	else: 
 		buildingRemoved.emit(building, qty)
 		print(str(building) + " " + str(qty) + " removed")
-		
+	#Erase empty keys
 	if buildingsTotal[building] <= 0:
 		buildingsTotal.erase(building)
-
-func getProdTotal(building):
-	var current = building.ref.getStats()
 	
+#////// Buildings Prod/Costs
+
+var ExtractorProdTotal: float = 0
+func extractorProdTotal():
+	ExtractorProdTotal = buildExtractor.ref.biomassProd
+	prodCont.ref.updateProduction("biomassProd", [ExtractorProdTotal,0])

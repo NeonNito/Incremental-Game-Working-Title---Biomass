@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6jr3d7cejtop"]
+
+[ext_resource type="Script" uid="uid://b4kdlpkyayshe" path="res://Classes/Buildings/Extractor/build_extractor_button.gd" id="1_uqhln"]
+[ext_resource type="Texture2D" uid="uid://r467u37wlp6g" path="res://Resources/UI/Button2.png" id="1_vphb3"]
+
+[node name="BuildExtractorButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_vphb3")
+script = ExtResource("1_uqhln")

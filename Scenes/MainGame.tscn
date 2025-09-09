@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0wev52u0wyye"]
+[gd_scene load_steps=11 format=3 uid="uid://d0wev52u0wyye"]
 
 [ext_resource type="Script" uid="uid://d012w5it6vpgr" path="res://Scenes/main_game.gd" id="1_yprpe"]
 [ext_resource type="PackedScene" uid="uid://exsavjkup8tq" path="res://Classes/_Main Processes/Clock.tscn" id="2_ybmw1"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dnme6elkcw1ji" path="res://Classes/_Main Processes/ResourceController.tscn" id="3_ybmw1"]
 [ext_resource type="PackedScene" uid="uid://ci3uemxo45dps" path="res://Classes/Resouces/Biomass/biomassController.tscn" id="4_321ql"]
 [ext_resource type="PackedScene" uid="uid://c65h24ytidl5w" path="res://Classes/_Main Processes/ProductionController.tscn" id="5_d4f28"]
-[ext_resource type="PackedScene" uid="uid://cm8fu0erje6uw" path="res://Classes/_Main Processes/BuildingUpgradeCont.tscn" id="7_3bmkb"]
+[ext_resource type="PackedScene" uid="uid://bkbl3oj23mhbl" path="res://Classes/_Main Processes/SizeController.tscn" id="6_48eim"]
 [ext_resource type="PackedScene" uid="uid://davywl6q0gjfh" path="res://Classes/_Main Processes/BuildingController.tscn" id="7_iuea6"]
-[ext_resource type="PackedScene" uid="uid://clbyeacvdsii5" path="res://Classes/Buildings/buildingExtractor.tscn" id="7_kvfik"]
+[ext_resource type="PackedScene" uid="uid://clbyeacvdsii5" path="res://Classes/Buildings/Extractor/buildingExtractor.tscn" id="7_kvfik"]
+[ext_resource type="PackedScene" uid="uid://ctmtqnkcq6fvo" path="res://Classes/Buildings/Extractor/buildingExtractorUpg.tscn" id="9_48eim"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_yprpe")
@@ -23,11 +24,15 @@ script = ExtResource("1_yprpe")
 
 [node name="ProductionController" parent="Main Processes" instance=ExtResource("5_d4f28")]
 
-[node name="BuildingController" parent="Main Processes" instance=ExtResource("7_iuea6")]
+[node name="SizeController" parent="Main Processes" instance=ExtResource("6_48eim")]
 
-[node name="BuildingUpgradeCont" parent="Main Processes/BuildingController" instance=ExtResource("7_3bmkb")]
+[node name="Buildings" type="Node" parent="Main Processes"]
 
-[node name="BuildingExtractor" parent="Main Processes/BuildingController/BuildingUpgradeCont" instance=ExtResource("7_kvfik")]
+[node name="BuildingController" parent="Main Processes/Buildings" instance=ExtResource("7_iuea6")]
+
+[node name="BuildingExtractorUpg" parent="Main Processes/Buildings/BuildingController" instance=ExtResource("9_48eim")]
+
+[node name="BuildingExtractor" parent="Main Processes/Buildings/BuildingController/BuildingExtractorUpg" instance=ExtResource("7_kvfik")]
 
 [node name="Control" parent="." instance=ExtResource("2_yprpe")]
 anchors_preset = -1

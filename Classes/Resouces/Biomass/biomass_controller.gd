@@ -38,7 +38,7 @@ func canSpendBiomass(quantity : int) -> bool:
 		print("invalid cost!")
 		return false
 		
-	if quantity > resourceCont.ref.biomassTotal: 
+	if quantity > resourceCont.ref.bank["biomass"][1]: 
 		print("Not Enough Biomass!")
 		return false
 	

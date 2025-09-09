@@ -8,8 +8,7 @@ func _init() -> void:
 	
 
 var prodBank: Dictionary = {
-	"biomassProd": [10,-2],
-	"chitinProd": [1,0]
+	"biomassProd": [0,0],
 }
 
 func _ready() -> void:
@@ -19,17 +18,11 @@ func getRate(resource) -> float:
 	var total: float = prodBank.get(resource)[0] + prodBank.get(resource)[1]
 	return total
 	
-func updateProduction(resource, total: Array):
-	prodBank.set(resource, total)
-
-func tallyProd():
-	pass
-	#func updateProd(resource, amount):
-	#var resourceMod = str(resource) + "Mod"
-	#print(resourceMod)
-	#buildUpgCont.ref.getModStats(resource,)
-	#
-
+func updateProduction(resource, amount: Array):
+	if prodBank.has(resource):
+		prodBank[resource] += amount
+	else: prodBank[resource] = amount
+	
 #// Resource Generators //#
 
 func productionRun():
@@ -37,6 +30,6 @@ func productionRun():
 
 func genBiomass():
 	var biomassOld = biomassCont.ref.getBiomass()
-	var prodTotal = prodBank.get("biomassProd")[0] + prodBank.get("biomassProd")[1]
+	var prodTotal = getRate("biomassProd")
 	biomassCont.ref.addBiomass(prodTotal)
 	

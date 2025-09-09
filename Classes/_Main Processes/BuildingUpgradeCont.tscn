@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm8fu0erje6uw"]
-
-[ext_resource type="Script" uid="uid://ceady6nadqs1x" path="res://Classes/_Main Processes/building_upgrade_cont.gd" id="1_olbb3"]
-
-[node name="BuildingUpgradeCont" type="Node"]
-script = ExtResource("1_olbb3")

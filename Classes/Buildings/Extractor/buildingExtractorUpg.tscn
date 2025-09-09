@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctmtqnkcq6fvo"]
+
+[ext_resource type="Script" uid="uid://cl2uhm04r3gjs" path="res://Classes/Buildings/Extractor/building_extractor_upg.gd" id="1_tj5pv"]
+
+[node name="BuildingExtractorUpg" type="Node"]
+script = ExtResource("1_tj5pv")

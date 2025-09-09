@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkbl3oj23mhbl"]
+
+[ext_resource type="Script" uid="uid://d0wnbfg08nci4" path="res://Classes/_Main Processes/size_controller.gd" id="1_a8b5t"]
+
+[node name="SizeController" type="Node"]
+script = ExtResource("1_a8b5t")
